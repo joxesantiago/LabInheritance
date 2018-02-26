@@ -7,6 +7,7 @@ public class Fibonacci extends Progression {
 	public Fibonacci() { 
 		this(1); 
 		prev = 0; 
+		firstValueT=false;
 	}
 	private Fibonacci(double first) {
 		super(first);

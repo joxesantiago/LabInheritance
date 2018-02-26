@@ -25,7 +25,8 @@ public class ProgressionTester1 {
 		
 		System.out.println("\n\n\nTesting Arithmetic:");
 		p = new Arithmetic(2, 3); 
-		p.nextValue(); 
+		p.firstValue();
+		p.nextValue();
 		p.printAllTerms(20);
 		
 		

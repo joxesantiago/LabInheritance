@@ -8,7 +8,7 @@ public class Arithmetic extends Progression {
 	public Arithmetic(double firstValue, double commonDifference) { 
 		super(firstValue); 
 		this.commonDifference = commonDifference; 
-		firstValueT=true;
+		firstValueT=false;
 	}
 	
 	@Override

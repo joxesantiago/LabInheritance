@@ -7,6 +7,7 @@ public class Geometric extends Progression {
 	public Geometric(double firstValue, double commonFactor) { 
 		super(firstValue); 
 		this.commonFactor = commonFactor; 
+		firstValueT=false;
 	}
 	
 	@Override
