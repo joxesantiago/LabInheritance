@@ -30,5 +30,4 @@ public class Geometric extends Progression {
 
 		return firstValue()*Math.pow(commonFactor, n-1);
 	}
-
 }

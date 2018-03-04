@@ -42,5 +42,13 @@ public abstract class Progression implements OrderedNumberStructure {
 		return value; 
 	}
 	
-	public abstract double nextValue(); 
+	public boolean Equals(Progression p) {
+		if(this.firstValue()==p.firstValue() && this.nextValue()==p.nextValue()) {
+			return true;
+		}
+		return false;
+	}
+	
+	public abstract double nextValue();
+	
 }

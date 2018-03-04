@@ -1,8 +1,8 @@
 package orderedStructures;
 
-import java.nio.channels.IllegalSelectorException;
+import interfaces.Combinable;
 
-public class Arithmetic extends Progression {
+public class Arithmetic extends Progression implements Combinable {
 	private double commonDifference; 
 	
 	public Arithmetic(double firstValue, double commonDifference) { 
@@ -30,5 +30,17 @@ public class Arithmetic extends Progression {
 			throw new IndexOutOfBoundsException("printAllTerms: Invalid argument value = " + n); 
 
 		return firstValue()+commonDifference*(n-1);
+	}
+
+	@Override
+	public Progression add(Progression p) {
+		p = new Arithmetic(this.firstValue()+p.firstValue(),this.commonDifference+(p.nextValue()-p.firstValue()));
+		return p;
+	}
+
+	@Override
+	public Progression substract(Progression p) {
+		p = new Arithmetic(this.firstValue()-p.firstValue(),this.commonDifference-(p.nextValue()-p.firstValue()));
+		return p;
 	}
 }
